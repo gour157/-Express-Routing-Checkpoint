@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>We're Closed | Our Website</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="closed-page">
+  <div class="closed-container">
+    <h1>We're Currently Closed</h1>
+    <p>Our website is only available during working hours:</p>
+    <p class="hours">Monday to Friday, 9 AM - 5 PM</p>
+    <p>Please come back during our working hours to access our services.</p>
+    <p class="current-time">Current time: <span id="current-time"></span></p>
+  </div>
+
+  <script>
+    // Display current time
+    function updateTime() {
+      const now = new Date();
+      document.getElementById('current-time').textContent = now.toLocaleString();
+    }
+    
+    updateTime();
+    setInterval(updateTime, 1000);
+  </script>
+</body>
+</html>
